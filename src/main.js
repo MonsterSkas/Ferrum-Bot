@@ -1,6 +1,4 @@
 const discord = require('discord.js')
-const dotenv = require('dotenv')
-dotenv.config()
 
 
 const client = new discord.Client({
@@ -226,7 +224,7 @@ client.on('messageCreate', (message) => {
 
 
 // LOGIN TO THE BOT
-client.login(process.env.TOKEN).then( () => {
+client.login(process.env.token).then( () => {
 
     client.user.setPresence({
 
