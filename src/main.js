@@ -27,7 +27,8 @@ client.commands = new discord.Collection()
 
 const commands = fs.readdirSync(`./Commands/`).filter(file => file.endsWith('.js'))
 
-for (file of commands) {
+for (file of commands)
+{
     
     const command = require(`./Commands/${file}`)
 
@@ -39,7 +40,8 @@ const prefix = ',';
 
 
 //HELP
-client.on('messageCreate', (message) => {
+client.on('messageCreate', (message) =>
+{
     
     if (message.author.bot) return
     if (!message.content.startsWith(prefix)) return
