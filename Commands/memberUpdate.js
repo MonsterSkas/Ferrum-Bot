@@ -9,6 +9,7 @@ module.exports = {
             .setColor('#94fc03')
             .setDescription(`Server: ${newMem.guild.name}`)
         
+        //SEND DM TO THE USER
         newMem.send({ embeds: [upEmbed] })
     }
 }
