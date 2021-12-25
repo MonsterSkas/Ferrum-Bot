@@ -14,6 +14,15 @@ const client = new discord.Client({
 })
 
 
+let http = require('http')
+
+http.createServer(function (req, res) {
+
+    res.write('I am alive')
+    res.end()
+}).listen(8080)
+
+
 client.on('ready', () => {
 
     console.log("Bot Ready")
