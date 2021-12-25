@@ -13,7 +13,7 @@ module.exports = {
             .setColor('#94fc03')
             .setTitle('MEMBERCOUNT')
             .setDescription(`We currently have ${mCount} members in our server`)
-            .setFooter(`Requested by ${message.author.user.tag}`)
+            .setFooter(`Requested by ${message.member.user.tag}`)
         
         message.reply({ embeds: [mcEmbed] })
     }
