@@ -35,6 +35,7 @@ module.exports = {
 
             let dmEmbed = new discord.MessageEmbed()
                 .setTitle(`You have been warned in ${message.guild.name}`)
+                .setThumbnail(`${memb.user.avatarURL()}`)
                 .setColor('#94fc03')
                 .addFields(
 
@@ -46,11 +47,12 @@ module.exports = {
             })
 
             let warnEmbed = new discord.MessageEmbed()
-            .setTitle(`${memb.user.tag} has been warned`)
-            .setColor('#94fc03')
-            .addFields(
+                .setTitle(`${memb.user.tag} has been warned`)
+                .setThumbnail(`${memb.user.avatarURL()}`)
+                .setColor('#94fc03')
+                .addFields(
 
-                { name: 'REASON:', value: `${reason}` }
+                    { name: 'REASON:', value: `${reason}` }
             )
             message.channel.send({ embeds: [warnEmbed] })
         }

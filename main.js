@@ -239,7 +239,7 @@ client.on('messageCreate', (message) => {
 
 
 // LOGIN TO THE BOT
-client.login(process.env.TOKEN).then( () => {
+client.login('OTE5MjAxNjg0MjEzODc4ODI0.YbSXRw.iPd17NAnhZxtrqrVbFdqSmVtGMA').then( () => {
 
     client.user.setPresence({
 

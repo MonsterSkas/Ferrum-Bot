@@ -37,6 +37,7 @@ module.exports = {
             let dmEmbed = new discord.MessageEmbed()
                 .setTitle(`You have been banned from ${message.guild.name}`)
                 .setColor('#94fc03')
+                .setThumbnail(`${memb.user.avatarURL()}`)
                 .addFields(
 
                     { name: 'REASON :', value: `${reason}` }
@@ -52,6 +53,7 @@ module.exports = {
             let banEmbed = new discord.MessageEmbed()
                 .setTitle(`${memb.user.tag} has been banned`)
                 .setColor('#94fc03')
+                .setThumbnail(`${memb.user.avatarURL()}`)
                 .addFields(
 
                     { name: 'REASON :', value: `${reason}` }
