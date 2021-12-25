@@ -36,6 +36,7 @@ module.exports = {
             await message.channel.messages.fetch({ limit: args[0] }).then(messages => {
 
                 message.channel.bulkDelete(messages)
+                
             }).catch(err => {
 
                 message.reply(`I cannot delete messages older than 14 days (This is how discord works LOL)`)
