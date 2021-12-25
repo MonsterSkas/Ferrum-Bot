@@ -3,8 +3,8 @@ module.exports = {
     name: 'mc',
     description: 'Counts the current number of members in the server',
 
-    async execute(message, args, discord) {
-
+    async execute(message, args, discord)
+    {
         message.react('✅')
         
         let mCount = message.guild.memberCount
