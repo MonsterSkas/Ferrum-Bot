@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 
 const discord = require('discord.js')
+//const dotenv = require('dotenv')
+//dotenv.config()
 
 
 app.listen(3000, () => {
@@ -221,6 +223,22 @@ client.on('messageCreate', (message) => {
 })
 
 
+//ANNOUNCE
+client.on('messageCreate', (message) => {
+
+    if (message.author.bot) return
+    if (!message.content.startsWith(prefix)) return
+
+    let args = message.content.slice(prefix.length).split(' ')
+    let command = args.shift().toLowerCase()
+
+    if (command == 'announce') {
+        
+        client.commands.get('announce').execute(message, args, discord)
+    }
+})
+
+
 //SUPPORT
 client.on('messageCreate', (message) => {
 
@@ -238,7 +256,7 @@ client.on('messageCreate', (message) => {
 })
 
 
-client.login(process.env.TOKEN).then( () => {
+client.login(process.env.TOKEN).then(() => {
 
     client.user.setPresence({
 
