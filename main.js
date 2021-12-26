@@ -239,6 +239,22 @@ client.on('messageCreate', (message) => {
 })
 
 
+//SOURCE CODE
+client.on('messageCreate', (message) => {
+
+    if (message.author.bot) return
+    if (!message.content.startsWith(prefix)) return
+    
+    let args = message.content.slice(prefix.length).split(' ')
+    let command = args.shift().toLowerCase()
+
+    if (command == 'sc' || command == 'sourcecode') {
+        
+        client.commands.get('sourcecode').execute(message, args)
+    }
+})
+
+
 //SUPPORT
 client.on('messageCreate', (message) => {
 
