@@ -15,7 +15,7 @@ module.exports = {
         } else if (!memb) {
 
             let kaEmbed = new discord.MessageEmbed()
-                .setDescription(`Who do you want me to kick?!! Shall I kick you?\I am a 3 time Karate world champion, and I believe you don't want your bones to be broken, do you? LOL`)
+                .setDescription(`Who do you want me to kick?!! Shall I kick you? I am a 3 time Karate world champion, and I believe you don't want your bones to be broken, do you? LOL`)
                 .setImage('https://cdn.discordapp.com/attachments/919202476266229772/922414649280958474/unknown.png')
                 .setColor('#94fc03')
             
