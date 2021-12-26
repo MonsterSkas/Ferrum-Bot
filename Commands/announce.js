@@ -18,6 +18,8 @@ module.exports = {
 
         } else {
 
+            message.react('✅')
+
             let announcementEmbed = new discord.MessageEmbed()
                 .setAuthor(`Announcement by ${auth.user.tag}`)
                 .setImage('https://repository-images.githubusercontent.com/441091518/a2dc8cd2-63d9-4ca6-812a-588c51e70ecf')
