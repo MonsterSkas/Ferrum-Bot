@@ -5,7 +5,7 @@ module.exports = {
 
     async execute(message, args) {
 
-        if(!message.member.id == '833890521893437440' || '665576173828440071') return
+        if(!message.member.permissions.has('ADMINISTRATOR')) return
 
         message.reply('https://github.com/xrn-gaming/Ferrum-Bot')
     }
