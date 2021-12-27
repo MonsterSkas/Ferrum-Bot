@@ -16,7 +16,7 @@ module.exports = {
             let avEmbed = new discord.MessageEmbed()
                 .setTitle(`${memb.user.tag}'s avatar`)
                 .setColor('#94fc03')
-                .setImage(`${memb.user.avatarURL()}`)
+                .setImage(memb.user.displayAvatarURL( { dynamic: true, size: 512 } ) )
                 .setFooter(`Requested by ${message.author.tag}`)
             
             message.channel.send({embeds: [avEmbed]})
