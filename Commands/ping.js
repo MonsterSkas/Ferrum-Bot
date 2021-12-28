@@ -10,7 +10,7 @@ module.exports = {
 
         let pingEmbed = new discord.MessageEmbed()
             .setColor('#94fc03')
-            .setTitle('Pong :love_you_gesture:')
+            .setTitle('Pong :ping_pong:')
             .setDescription(`Time : ${timeTaken} ms`)
         
         message.channel.send({ embeds: [pingEmbed]})

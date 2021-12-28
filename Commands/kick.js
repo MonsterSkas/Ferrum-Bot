@@ -19,7 +19,7 @@ module.exports = {
                 .setImage('https://cdn.discordapp.com/attachments/919202476266229772/922414649280958474/unknown.png')
                 .setColor('#94fc03')
             
-            return message.reply({ embeds: [kaEmbed] })
+            return message.channel.send({ embeds: [kaEmbed] })
 
         } else if (memb.id == '919201684213878824') {
             

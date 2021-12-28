@@ -14,6 +14,6 @@ module.exports = {
 
                 { name: 'SUPPORT', value: 'Contact <@833890521893437440> and <@665576173828440071> for support' }
             )
-        message.reply({embeds: [supportEmbed]})
+        message.channel.send({embeds: [supportEmbed]})
     }
 }
