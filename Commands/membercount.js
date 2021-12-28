@@ -14,6 +14,6 @@ module.exports = {
             .setTitle('MEMBERCOUNT')
             .setDescription(`We currently have ${mCount} members in our server`)
         
-        message.reply({ embeds: [mcEmbed] })
+        message.channel.send({ embeds: [mcEmbed] })
     }
 }

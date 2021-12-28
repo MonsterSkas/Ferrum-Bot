@@ -26,6 +26,6 @@ module.exports = {
                 { name: ',purge', value: `Purge messages. Only for mods and admins.` },
                 
         )
-        message.reply({embeds: [helpEmbed]})
+        message.channel.send({embeds: [helpEmbed]})
     }
 }

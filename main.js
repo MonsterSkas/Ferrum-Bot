@@ -84,7 +84,7 @@ client.on('messageCreate', (message) => {
     
     if (command == 'ping') {
 
-        client.commands.get('ping').execute(message, args)
+        client.commands.get('ping').execute(message, args, discord)
     }
 })
 
