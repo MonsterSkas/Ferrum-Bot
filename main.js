@@ -28,7 +28,6 @@ const client = new discord.Client({
     ]
 })
 
-
 client.on('ready', () => {
 
     console.log("Bot Ready")
