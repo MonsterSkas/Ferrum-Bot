@@ -22,7 +22,9 @@ module.exports = {
 
             message.reply(`I cant delete more than 999 messages at a time, pls forgive me :/`)
 
-        } else {
+            } else {
+                
+                await message.delete()
 
             await message.channel.messages.fetch({ limit: args[0] }).then(messages => {
 
