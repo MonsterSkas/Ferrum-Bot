@@ -4,15 +4,22 @@ module.exports = {
     description: 'pong',
     async execute(message, args, discord){
     
-        message.react('✅')
+        try {
+
+        message.react('✅').catch(err => {return})
         
         const timeTaken = Date.now() - message.createdTimestamp;
 
         let pingEmbed = new discord.MessageEmbed()
-            .setColor('#94fc03')
+            .setColor('#00d0ff')
             .setTitle('Pong :ping_pong:')
             .setDescription(`Time : ${timeTaken} ms`)
         
         message.channel.send({ embeds: [pingEmbed]})
+        }
+        catch (err) {
+            
+            return
+        }
     }
 }

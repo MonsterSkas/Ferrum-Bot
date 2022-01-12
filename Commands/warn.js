@@ -5,6 +5,8 @@ module.exports = {
 
     async execute(message, args, discord) {
 
+        try {
+
         let memb = message.mentions.members.first()
 
         let reason = args.slice(1).join(' ')
@@ -31,30 +33,29 @@ module.exports = {
 
         } else {
 
-            message.react('✅')
+            message.react('✅').catch(err => {return})
 
             let dmEmbed = new discord.MessageEmbed()
                 .setTitle(`You have been warned in ${message.guild.name}`)
                 .setThumbnail(`${memb.user.avatarURL()}`)
-                .setColor('#94fc03')
-                .addFields(
-
-                    { name: 'REASON:', value: `${reason}` }
-            )
+                .setDescription(`**Reason**: ${reason}`)
+                .setColor('#00d0ff')
+            
             await memb.send({embeds: [dmEmbed]}).catch(err => {
 
-                return message.channel.send(`DM cnnot be sent to the user, the reason is mostly because the user has bocked me`)
+                return message.channel.send(`**DM cannot be sent to the user for some reason**`)
             })
 
             let warnEmbed = new discord.MessageEmbed()
                 .setTitle(`${memb.user.tag} has been warned`)
                 .setThumbnail(`${memb.user.avatarURL()}`)
-                .setColor('#94fc03')
-                .addFields(
-
-                    { name: 'REASON:', value: `${reason}` }
-            )
+                .setDescription(`**Reason**: ${reason}`)
+                .setColor('#00d0ff')
             message.channel.send({ embeds: [warnEmbed] })
+            }
+        }
+        catch (err) {
+            return
         }
     }
 }

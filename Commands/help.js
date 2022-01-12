@@ -5,10 +5,11 @@ module.exports = {
 
     async execute(message, args, discord) {
 
-        message.react('✅')
+        try {
+            message.react('✅').catch(err => {return})
         
         const helpEmbed = new discord.MessageEmbed()
-            .setColor('#94fc03')
+            .setColor('#00d0ff')
             .setTitle('FERRUM COMMANDS')
             .setImage('https://i.pinimg.com/originals/db/01/d5/db01d5dfe6a75b5b047c00819d3e8a3d.jpg')
             .setDescription('These are the Ferrum comamnds avilable till now')
@@ -27,5 +28,9 @@ module.exports = {
                 
         )
         message.channel.send({embeds: [helpEmbed]})
+        }
+        catch (err) {
+            return
+        }
     }
 }

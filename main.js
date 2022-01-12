@@ -117,7 +117,7 @@ client.on('messageCreate', (message) => {
 
     if (command == 'tag') {
         
-        client.commands.get('tag').execute(message, args)
+        client.commands.get('tag').execute(message, args, discord)
     }
 })
 
@@ -250,6 +250,22 @@ client.on('messageCreate', (message) => {
     if (command == 'sc' || command == 'sourcecode') {
         
         client.commands.get('sourcecode').execute(message, args)
+    }
+})
+
+
+//MODMAIL
+client.on('messageCreate', (message) => {
+
+    if (message.author.bot) return
+    if (!message.content.startsWith(prefix)) return
+
+    const args = message.content.slice(prefix.length).split(' ')
+    const command = args.shift().toLowerCase()
+
+    if (command == 'modmail') {
+        
+        client.commands.get('modmail').execute(message, args, discord)
     }
 })
 
