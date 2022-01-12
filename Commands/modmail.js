@@ -21,7 +21,7 @@ module.exports = {
                 .setDescription(`Be patient till the mods reply you back with a message`)
         
             message.channel.send({ embeds: [sentEmbed] })
-            auth.send({ embeds: [sentEmbed] })
+            auth.send({ embeds: [sentEmbed] }).catch(err => {return})
 
             let modEmbed = new discord.MessageEmbed()
                 .setColor('#00d0ff')
