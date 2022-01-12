@@ -19,7 +19,6 @@ module.exports = {
                 .setTitle(`${memb.user.tag}'s avatar`)
                 .setColor('#00d0ff')
                 .setImage(memb.user.displayAvatarURL( { dynamic: true, size: 512 } ) )
-                .setFooter(`Requested by ${message.author.tag}`)
             
             message.channel.send({embeds: [avEmbed]})
             }
