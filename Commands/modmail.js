@@ -13,7 +13,7 @@ module.exports = {
             let mods = []
             mods[0] = message.guild.members.cache.get('833890521893437440')
 
-            mess.react('✅').catch(err => {return})
+            message.react('✅').catch(err => {return})
 
             let sentEmbed = new discord.MessageEmbed()
                 .setTitle(`Mail sent sucessfully`)
