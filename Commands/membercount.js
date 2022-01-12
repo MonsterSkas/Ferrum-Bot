@@ -10,7 +10,7 @@ module.exports = {
         let mCount = message.guild.memberCount
 
         let mcEmbed = new discord.MessageEmbed()
-            .setColor('#94fc03')
+            .setColor('#00d0ff')
             .setTitle('MEMBERCOUNT')
             .setDescription(`We currently have ${mCount} members in our server`)
         
