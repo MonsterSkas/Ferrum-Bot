@@ -11,9 +11,7 @@ module.exports = {
         const helpEmbed = new discord.MessageEmbed()
             .setColor('#00d0ff')
             .setTitle('FERRUM COMMANDS')
-            .setImage('https://i.pinimg.com/originals/db/01/d5/db01d5dfe6a75b5b047c00819d3e8a3d.jpg')
             .setDescription('These are the Ferrum comamnds avilable till now')
-            .setFooter(`Requested by ${message.member.user.tag}`)
             .addFields(
 
                 { name: ',ping', value: 'Shows the current status of the bot.' },
@@ -25,6 +23,7 @@ module.exports = {
                 { name: ',ban', value: `Bans a mamber. Only for mods and admins.` },
                 { name: ',warn', value: `Warns a mamber. Only for mods and admins.` },
                 { name: ',purge', value: `Purge messages. Only for mods and admins.` },
+                { name: ',modmail', value: `Sends a messaage to the mods, please don't send unnecessary modmails` }
                 
         )
         message.channel.send({embeds: [helpEmbed]})
