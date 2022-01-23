@@ -33,8 +33,6 @@ module.exports = {
 
         } else {
 
-            message.react('✅').catch(err => {return})
-
             let dmEmbed = new discord.MessageEmbed()
                 .setTitle(`You have been warned in ${message.guild.name}`)
                 .setThumbnail(`${memb.user.avatarURL()}`)

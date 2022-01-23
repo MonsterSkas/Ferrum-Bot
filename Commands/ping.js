@@ -5,8 +5,6 @@ module.exports = {
     async execute(message, args, discord){
     
         try {
-
-        message.react('✅').catch(err => {return})
         
         const timeTaken = Date.now() - message.createdTimestamp;
 

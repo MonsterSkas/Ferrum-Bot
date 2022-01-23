@@ -13,8 +13,6 @@ module.exports = {
             message.reply('Buddy, mention a user whose avadar you want to see!')
         } else {
 
-            message.react('✅').catch(err => {return})
-
             let avEmbed = new discord.MessageEmbed()
                 .setTitle(`${memb.user.tag}'s avatar`)
                 .setColor('#00d0ff')

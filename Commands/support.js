@@ -6,7 +6,6 @@ module.exports = {
     async execute(message, args, discord) {
 
         try {
-            message.react('✅').catch(err => {return})
 
         const supportEmbed = new discord.MessageEmbed()
             .setColor('#00d0ff')

@@ -122,16 +122,6 @@ client.on('messageCreate', (message) => {
 })
 
 
-//MEMBER UPDATE
-client.on('guildMemberUpdate', (oldMem, newMem) => {
-
-    if (oldMem.nickname !== newMem.nickname) {
-
-        client.commands.get('memberUpdate').execute(oldMem, newMem, discord)
-    }
-})
-
-
 //CHANNEL CREATE
 client.on('channelCreate', (channel) => {
 

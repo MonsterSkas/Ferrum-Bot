@@ -11,8 +11,6 @@ module.exports = {
             
             message.reply('**LISTEN**, mention a user whose tag you want to see, **BUD**')
         } else {
-
-            message.react('✅').catch(err => {return})
             
             let tagEmbed = new discord.MessageEmbed()
                 .setColor('#00d0ff')

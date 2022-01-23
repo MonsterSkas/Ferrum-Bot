@@ -5,7 +5,6 @@ module.exports = {
 
     async execute(message, args, discord)
     {
-        message.react('✅').catch(err => {return})
         
         let mCount = message.guild.memberCount
 

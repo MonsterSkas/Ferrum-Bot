@@ -37,8 +37,6 @@ module.exports = {
 
         } else {
 
-            message.react('✅').catch(err => {return})
-
             let reason = args.slice(1).join(' ') || 'Not specified'
 
             let dmEmbed = new discord.MessageEmbed()
