@@ -1,6 +1,6 @@
 const discord = require('discord.js')
-//const dotenv = require('dotenv')
-//dotenv.config()
+const dotenv = require('dotenv')
+dotenv.config()
 
 const client = new discord.Client({
 
