@@ -1,19 +1,6 @@
-const express = require('express')
-const app = express()
-
 const discord = require('discord.js')
 //const dotenv = require('dotenv')
 //dotenv.config()
-
-app.listen(3000, () => {
-
-    console.log('Project is running!')
-})
-
-app.get('/', (req, res) => {
-
-    res.send('Hello World!')
-})
 
 const client = new discord.Client({
 

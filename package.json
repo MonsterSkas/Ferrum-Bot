@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/xrn-gaming/Ferrum-Bot/issues"
   },
+  "engines": {
+    "node": ">=16.6.0"
+  },
   "homepage": "https://github.com/xrn-gaming/Ferrum-Bot#readme",
   "dependencies": {
     "discord.js": "^13.6.0",
