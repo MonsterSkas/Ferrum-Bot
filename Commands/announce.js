@@ -5,30 +5,23 @@ module.exports = {
 
     async execute(message, args, discord) {
 
-        try {
-
             let auth = message.member
 
             if (!message.member.permissions.has('ADMINISTRATOR' || 'MANAGE_MESSAGES')) {
             
-                return message.reply(`You don't have the permission to make announcements`)
+                return message.reply(`You don't have the permission to make announcements`).catch (err => {return})
 
             } else {
 
-                message.delete()
+                message.delete().catch(err => {return})
 
                 let announcementEmbed = new discord.MessageEmbed()
                     .setAuthor(`Announcement by ${auth.user.tag}`)
-                    .setImage('https://repository-images.githubusercontent.com/441091518/a2dc8cd2-63d9-4ca6-812a-588c51e70ecf')
                     .setThumbnail(auth.user.avatarURL())
                     .setDescription(`${args.join(' ')}`)
-                    .setColor('#00d0ff')
+                    .setColor('#2F3136')
                 
-                message.channel.send({ embeds: [announcementEmbed] })
+                message.channel.send({ embeds: [announcementEmbed] }).catch(err => {return})
             }
-        }
-        catch (err) {
-            return
-        }
     }
 }

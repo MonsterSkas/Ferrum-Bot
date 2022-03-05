@@ -7,7 +7,7 @@ module.exports = {
             let msg = args.join(' ')
             let auth = message.member
 
-        if (!msg) return message.reply(`Please include the message you want to mail!`)
+        if (!msg) return message.reply(`Please include the message you want to mail!`).catch (err => {return})
         else {
 
             let mods = []
@@ -15,20 +15,20 @@ module.exports = {
 
             let sentEmbed = new discord.MessageEmbed()
                 .setTitle(`Mail sent sucessfully`)
-                .setColor('#00d0ff')
+                .setColor('#2F3136')
                 .setDescription(`Be patient till the mods reply you back with a message`)
         
-            message.channel.send({ embeds: [sentEmbed] })
+            message.channel.send({ embeds: [sentEmbed] }).catch (err => {return})
             auth.send({ embeds: [sentEmbed] }).catch(err => {return})
 
             let modEmbed = new discord.MessageEmbed()
-                .setColor('#00d0ff')
-                .setTitle(`${auth.user.tag} sent a MODMAIL`)
+                .setColor('#2F3136')
+                .setTitle(`${auth.user.tag} sent a modmail`)
                 .setDescription(`${msg}`)
             
         for (i = 0; i < mods.length; i++) {
 
-            mods[i].send({ embeds: [modEmbed] })
+            mods[i].send({ embeds: [modEmbed] }).catch (err => {return})
         }
         }
     }

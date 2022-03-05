@@ -6,6 +6,6 @@ module.exports = {
     async execute(channel) {
 
         let chName = channel
-        channel.send(`Haha, this channel ${chName} has been just made LOL`)
+        channel.send(`Haha, this channel ${chName} has been just made LOL`).catch (err => {return})
     }
 }

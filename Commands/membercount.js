@@ -9,10 +9,10 @@ module.exports = {
         let mCount = message.guild.memberCount
 
         let mcEmbed = new discord.MessageEmbed()
-            .setColor('#00d0ff')
-            .setTitle('MEMBERCOUNT')
+            .setColor('#2F3136')
+            .setTitle('Membercount')
             .setDescription(`We currently have ${mCount} members in our server`)
         
-        message.channel.send({ embeds: [mcEmbed] })
+        message.channel.send({ embeds: [mcEmbed] }).catch (err => {return})
     }
 }
