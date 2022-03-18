@@ -12,9 +12,13 @@ module.exports = {
             .setDescription("Help!")
             .addFields(
 
-                { name: "🟠\tModeration", value: "Moderation commands....meant for just moderators obviously\n``kick``\t``ban``\t``warn``" },
-                { name: "🟢\tBasic", value: "Basic commands meant for every members of the server\n``ping``\t``tag``\t``avatar``\t``membercount/mc``\n``modmail``" }
-                
+                { name: "ping", value: "-> A random command for checking the status of the bot" },
+                { name: "avatar", value: "-> Gives the avatar of an user" },
+                { name: "membercount/mc", value: "-> Shows the current number of members of the server" },
+                { name: "purge", value: "-> Purges messages" },
+                { name: "kick", value: "-> Kickes a member" },
+                { name: "ban", value: "-> Bans a member" },
+                { name: "warn", value: "-> Warns a member" }
         )
         message.channel.send({embeds: [helpEmbed]}).catch (err => {return})
     }

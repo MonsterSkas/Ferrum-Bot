@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 
 const discord = require('discord.js')
-//const dotenv = require('dotenv')
-//dotenv.config()
+const dotenv = require('dotenv')
+dotenv.config()
 
 app.listen(3000, () => {
 
@@ -95,28 +95,6 @@ client.on('messageCreate', (message) => {
     }
 })
 
-//TAG
-client.on('messageCreate', (message) => {
-
-    if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-
-    const commandBody = message.content.slice(prefix.length);
-    const args = commandBody.split(' ');
-    const command = args.shift().toLowerCase();
-
-    if (command == 'tag') {
-        
-        client.commands.get('tag').execute(message, args, discord)
-    }
-})
-
-//CHANNEL CREATE
-client.on('channelCreate', (channel) => {
-
-    client.commands.get('channelCreate').execute(channel)
-})
-
 //MEMBERCOUNT
 client.on('messageCreate', (message) => {
 
@@ -196,21 +174,6 @@ client.on('messageCreate', (message) => {
     }
 })
 
-//ANNOUNCE
-client.on('messageCreate', (message) => {
-
-    if (message.author.bot) return
-    if (!message.content.startsWith(prefix)) return
-
-    let args = message.content.slice(prefix.length).split(' ')
-    let command = args.shift().toLowerCase()
-
-    if (command == 'announce') {
-        
-        client.commands.get('announce').execute(message, args, discord)
-    }
-})
-
 //SOURCE CODE
 client.on('messageCreate', (message) => {
 
@@ -223,21 +186,6 @@ client.on('messageCreate', (message) => {
     if (command == 'sc' || command == 'sourcecode') {
         
         client.commands.get('sourcecode').execute(message, args)
-    }
-})
-
-//MODMAIL
-client.on('messageCreate', (message) => {
-
-    if (message.author.bot) return
-    if (!message.content.startsWith(prefix)) return
-
-    const args = message.content.slice(prefix.length).split(' ')
-    const command = args.shift().toLowerCase()
-
-    if (command == 'modmail') {
-        
-        client.commands.get('modmail').execute(message, args, discord)
     }
 })
 
