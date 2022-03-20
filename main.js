@@ -195,7 +195,7 @@ client.login(process.env.TOKEN).then(() => {
 
         activities: [{
 
-            name: 'C/C++',
+            name: 'Killing programmers',
             type: 'PLAYING'
         }],
         status: 'online'
