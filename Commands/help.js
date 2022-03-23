@@ -20,7 +20,9 @@ module.exports = {
                 { name: "ban", value: "Bans a member" },
                 { name: "warn", value: "Warns a member" }
         )
-            .setFooter("Total commands 7")
+            .setFooter({
+                text: "Total commands 7"
+            })
         message.channel.send({ embeds: [helpEmbed] }).catch(err => { return });
     }
 }
