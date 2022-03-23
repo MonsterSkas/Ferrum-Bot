@@ -59,7 +59,9 @@ client.on('messageCreate', (message) => {
 
     if (command == 'help') {
 
-        client.commands.get('help').execute(message, args, discord)
+        client.commands.get('help').execute(message, args, discord);
+        const helpEmbed = new discord.MessageEmbed()
+        .set
     }
 })
 

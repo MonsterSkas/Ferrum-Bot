@@ -8,8 +8,8 @@ module.exports = {
         const helpEmbed = new discord.MessageEmbed()
             .setColor('#2F3136')
             .setThumbnail("https://cdn.discordapp.com/avatars/919201684213878824/13b852ee7cfd4fd4b78dbe5d94ca3232.webp?size=512")
-            .setTitle("Ferrum commands")
-            .setDescription("Help!")
+            .setTitle("Ferrum Help")
+            .setDescription("Ferrum is the official bot of The Legendary Protector with features like moderation. Many other features coming soon!")
             .addFields(
 
                 { name: "ping", value: "A random command for checking the status of the bot" },
@@ -20,6 +20,7 @@ module.exports = {
                 { name: "ban", value: "Bans a member" },
                 { name: "warn", value: "Warns a member" }
         )
-        message.channel.send({embeds: [helpEmbed]}).catch (err => {return})
+            .setFooter("Total commands 7")
+        message.channel.send({ embeds: [helpEmbed] }).catch(err => { return });
     }
 }
