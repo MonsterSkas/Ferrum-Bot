@@ -12,13 +12,13 @@ module.exports = {
             .setDescription("Help!")
             .addFields(
 
-                { name: "ping", value: "-> A random command for checking the status of the bot" },
-                { name: "avatar", value: "-> Gives the avatar of an user" },
-                { name: "membercount/mc", value: "-> Shows the current number of members of the server" },
-                { name: "purge", value: "-> Purges messages" },
-                { name: "kick", value: "-> Kickes a member" },
-                { name: "ban", value: "-> Bans a member" },
-                { name: "warn", value: "-> Warns a member" }
+                { name: "ping", value: "A random command for checking the status of the bot" },
+                { name: "avatar", value: "Gives the avatar of an user" },
+                { name: "membercount/mc", value: "Shows the current number of members of the server" },
+                { name: "purge", value: "Purges messages" },
+                { name: "kick", value: "Kicks a member" },
+                { name: "ban", value: "Bans a member" },
+                { name: "warn", value: "Warns a member" }
         )
         message.channel.send({embeds: [helpEmbed]}).catch (err => {return})
     }
