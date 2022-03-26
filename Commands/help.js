@@ -19,10 +19,10 @@ module.exports = {
                 { name: "kick", value: "Kicks a member" },
                 { name: "ban", value: "Bans a member" },
                 { name: "warn", value: "Warns a member" }
-        )
+            )
             .setFooter({
                 text: "Total commands 7"
-            })
-        message.channel.send({ embeds: [helpEmbed] }).catch(err => { return });
+            });
+        message.channel.send({ embeds: [helpEmbed] });
     }
 }

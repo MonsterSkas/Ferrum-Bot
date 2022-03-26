@@ -5,33 +5,32 @@ module.exports = {
 
     async execute(message, args) {
         
-        if (!message.member.permissions.has('MANAGE_MESSAGES' || 'ADMINISTRATOR')){
+        if (!message.member.permissions.has('MANAGE_MESSAGES' || 'ADMINISTRATOR')) {
         
-        return message.reply(`You don't have the **permission** to **purge messages**`).catch (err => {return})
+            return message.reply(`You don't have the **permission** to **purge messages**`).catch(err => { return });
 
         } else if (!args[0]) {
             
-            return message.reply('Please specify the **number of messages** you want to delete!').catch (err => { return })
+            return message.reply('Please specify the **number of messages** you want to delete!').catch(err => { return });
 
         } else if (isNaN(args[0])) {
 
-            message.reply(`Do you even know, what are numbers, anyway?!!`).catch (err => {return})
+            message.reply(`What you typed in is **not a number**, what are you doing LOL`).catch(err => { return });
 
         } else if (args[0] >= 1000) {
 
-            message.reply(`I cant delete more than 999 messages at a time, pls forgive me :/`).catch (err => {return})
+            message.reply(`I cant delete more than 999 messages at a time, pls forgive me :/`).catch(err => { return });
 
             } else {
                 
-                await message.delete()
+            await message.delete();
 
             await message.channel.messages.fetch({ limit: args[0] }).then(messages => {
 
-                message.channel.bulkDelete(messages).catch (err => {return})
-                
-            }).catch(err => {
-
-                message.reply(`I cannot delete messages older than **14 days**`).catch (err => {return})
+                message.channel.bulkDelete(messages).catch(err => {
+                    
+                    return message.channel.send(`I cannot delete messages older than **14 days**`).catch(err => { return });
+                })
             })
         }
     }

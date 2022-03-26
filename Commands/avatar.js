@@ -8,16 +8,16 @@ module.exports = {
 
         if (!memb) {
             
-            message.reply('Buddy, mention a user whose avadar you want to see!').catch(err => { return })
+            message.reply('Buddy, **mention a user** whose avadar you want to see!');
             
         } else {
 
             let avEmbed = new discord.MessageEmbed()
                 .setTitle(`${memb.user.tag}'s avatar`)
                 .setColor('#2F3136')
-                .setImage(memb.user.displayAvatarURL( { dynamic: true, size: 512 } ) )
+                .setImage(memb.user.displayAvatarURL({ dynamic: true, size: 512 }));
             
-            message.channel.send({embeds: [avEmbed]}).catch (err => {return})
+            message.channel.send({ embeds: [avEmbed] });
         }
     } 
 }
