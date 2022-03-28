@@ -37,10 +37,10 @@ module.exports = {
                 .setDescription(`Reason: ${reason}`)
                 .setColor('#2F3136');
             
-            await memb.send({embeds: [dmEmbed]}).catch(err => {
+            await memb.send({ embeds: [dmEmbed] }).catch(err => {
 
                 return message.channel.send(`**DM cannot be sent to the user for some reason**`);
-            })
+            });
 
             let warnEmbed = new discord.MessageEmbed()
                 .setTitle(`${memb.user.tag} has been warned`)
