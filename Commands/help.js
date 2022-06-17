@@ -18,7 +18,7 @@ module.exports = {
                 { name: "purge", value: "Purges messages" }
             )
             .setFooter({
-                text: "Total commands 7"
+                text: "Total commands 4"
             });
         message.channel.send({ embeds: [helpEmbed] }).catch(err => { return });
     }
