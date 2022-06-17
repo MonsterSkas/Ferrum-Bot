@@ -111,54 +111,6 @@ client.on('messageCreate', (message) => {
     }
 });
 
-//KICK
-client.on('messageCreate', (message) => {
-
-    if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-
-    const args = message.content.slice(prefix.length).split(' ');
-    const command = args.shift().toLowerCase();
-    
-    if (command == 'kick') {
-
-        client.commands.get('kick').execute(message, args, discord);
-    }
-});
-
-//BAN
-client.on('messageCreate', (message) => {
-
-    if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-
-    const commandBody = message.content.slice(prefix.length);
-    const args = commandBody.split(' ');
-    const command = args.shift().toLowerCase();
-
-    let fbot = message.guild.members.cache.get('919201684213878824');
-    
-    if (command == 'ban') {
-
-        client.commands.get('ban').execute(message, args, discord);
-    }
-});
-
-//WARN
-client.on('messageCreate', (message) => {
-
-    if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-
-    let args = message.content.slice(prefix.length).split(' ');
-    let command = args.shift().toLowerCase();
-
-    if (command == 'warn') {
-
-        client.commands.get('warn').execute(message, args, discord);
-    }
-});
-
 //PURGE
 client.on('messageCreate', (message) => {
 
@@ -171,21 +123,6 @@ client.on('messageCreate', (message) => {
     if (command == 'purge') {
         
         client.commands.get('purge').execute(message, args, discord);
-    }
-});
-
-//SOURCE CODE
-client.on('messageCreate', (message) => {
-
-    if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-    
-    let args = message.content.slice(prefix.length).split(' ');
-    let command = args.shift().toLowerCase()
-
-    if (command == 'sc' || command == 'sourcecode') {
-        
-        client.commands.get('sourcecode').execute(message, args);
     }
 });
 
