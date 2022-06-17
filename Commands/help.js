@@ -9,7 +9,7 @@ module.exports = {
             .setColor('#2F3136')
             .setThumbnail("https://cdn.discordapp.com/avatars/919201684213878824/13b852ee7cfd4fd4b78dbe5d94ca3232.webp?size=512")
             .setTitle("Ferrum Help")
-            .setDescription("Ferrum is the official bot of The Legendary Protector with features like moderation. Many other features coming soon!")
+            .setDescription("Ferrum is the official bot of The Legendary Protector with simple utility features")
             .addFields(
 
                 { name: "ping", value: "A random command for checking the status of the bot" },
