@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
 
     name: 'ping',
     description: 'pong',
@@ -13,4 +13,15 @@ module.exports = {
         
         message.channel.send({ embeds: [pingEmbed] });
     }
-}
+}*/
+
+const { SlashCommandBuilder } = require('discord.js');
+
+module.exports = {
+	data: new SlashCommandBuilder()
+		.setName('ping')
+		.setDescription('Replies with Pong!'),
+	async execute(interaction) {
+		await interaction.reply('Pong!');
+	},
+};

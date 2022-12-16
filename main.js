@@ -13,7 +13,7 @@ app.listen(3000, () => {
 app.get('/', (req, res) => {
 
     res.send('Hello World!');
-})
+});
 
 const client = new discord.Client({
 
@@ -28,7 +28,7 @@ const client = new discord.Client({
 client.on('ready', () => {
 
     console.log("Bot Ready!");
-})
+});
 
 //COMMAND HANDLER
 const fs = require('fs');
@@ -64,7 +64,7 @@ client.on('messageCreate', (message) => {
 });
 
 //PING PONG
-client.on('messageCreate', (message) => {
+/*client.on('messageCreate', (message) => {
 
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
@@ -77,7 +77,7 @@ client.on('messageCreate', (message) => {
 
         client.commands.get('ping').execute(message, args, discord);
     }
-});
+});*/
 
 //AVATAR
 client.on('messageCreate', (message) => {
@@ -125,6 +125,8 @@ client.on('messageCreate', (message) => {
         client.commands.get('purge').execute(message, args, discord);
     }
 });
+
+
 
 client.login(process.env.TOKEN).then(() => {
 

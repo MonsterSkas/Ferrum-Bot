@@ -7,15 +7,15 @@ module.exports = {
         
         if (!message.member.permissions.has('MANAGE_MESSAGES' || 'ADMINISTRATOR')) {
         
-            return message.reply(`You don't have the **permission** to **purge messages**`).catch(err => { return });
+            return message.reply(`You don't have the permission to purge messages`).catch(err => { return });
 
         } else if (!args[0]) {
             
-            return message.reply('Please specify the **number of messages** you want to delete!').catch(err => { return });
+            return message.reply('Please specify the number of messages you want to delete!').catch(err => { return });
 
         } else if (isNaN(args[0])) {
 
-            message.reply(`What you typed in is **not a number**, what are you doing LOL`).catch(err => { return });
+            message.reply(`What you typed in is not a number, what are you doing LOL`).catch(err => { return });
 
         } else if (args[0] >= 1000) {
 
@@ -31,7 +31,7 @@ module.exports = {
                     
                     return message.channel.send(`I cannot delete messages older than **14 days**`).catch(err => { return });
                 })
-            })
+            });
         }
     }
 }

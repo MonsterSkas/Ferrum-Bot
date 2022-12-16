@@ -8,7 +8,7 @@ module.exports = {
 
         if (!memb) {
             
-            message.reply('Buddy, **mention a user** whose avadar you want to see!');
+            message.reply('Buddy, mention a user whose avadar you want to see!');
             
         } else {
 

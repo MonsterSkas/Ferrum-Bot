@@ -14,7 +14,7 @@ module.exports = {
 
                 { name: "ping", value: "A random command for checking the status of the bot" },
                 { name: "avatar", value: "Gives the avatar of an user" },
-                { name: "membercount/mc", value: "Shows the current number of members of the server" },
+                { name: "membercount/mc", value: "Shows the current number of members in the server" },
                 { name: "purge", value: "Purges messages" }
             )
             .setFooter({
